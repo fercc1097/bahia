@@ -1,23 +1,67 @@
 @import "../../theme//colors.scss";
+@import "../../theme//typography.scss";
 
-.menuContainer{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 24px;
-    align-items: center;
+.menu{
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    background-color: $green-ligth;
     z-index: 99;
-    p{
-        color: #19191B;
-        font-size: 24px;
-        font-weight: bold;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    .menuContainer{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 24px;
+        align-items: center;
+        background-color: $green-ligth;
+        p{
+            color: #19191B;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        img{
+            cursor: pointer;
+        }
     }
-    img{
-        cursor: pointer;
+
+    .optionsContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: $green-ligth;
+
+        .option{
+            width: 100%;
+            @include body;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+            padding: 10px 0;
+            &:hover{
+                animation-name: changeColor;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+        }
     }
+}
+
+@keyframes changeColor {
+    0%{
+        background-color: $green-dark;
+        color: #696871;
+    }
+    100%{
+        background-color: $green;
+    }
+
+}
+
+@keyframes slide {
+	0% {transform:translateX(-100%);}
+	100% {transform:translateX(100%);}
 }
