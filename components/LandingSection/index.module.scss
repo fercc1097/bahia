@@ -1,0 +1,46 @@
+@import "../../theme//typography.scss";
+@import "../../theme//colors.scss";
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    background-color: $green-ligth;
+    margin-bottom: 60px;
+
+    .content{
+        max-width: 515px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h1{
+            @include title;
+            margin-bottom: 60px;
+        }
+        p{
+            @include body;
+            margin-bottom: 60px;
+        }
+        a{
+            border-radius: 5px;
+            color: white;
+            background-color: $pink;
+            width: 515px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    img{
+        max-width: 506px;
+    }
+
+    
+}
+.layout{
+    background-color: $green-ligth;
+}

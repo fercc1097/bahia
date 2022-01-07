@@ -1,0 +1,46 @@
+@import "../../theme//typography.scss";
+@import "../../theme//colors.scss";
+
+.layout{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content{
+        margin-left: 100px;
+        max-width: 555px;
+        h1{
+            @include title;
+            margin-bottom: 30px;
+        }
+        p{
+            @include body;
+            margin-bottom: 30px;
+        }
+        a{
+            border-radius: 5px;
+            color: white;
+            background-color: $pink;
+            width: 195px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    .divider{
+        width: 15px;
+        height: 100%;
+        background-color: $pink;
+        margin-left: 20px
+    }
+    video{
+        height: 70vh;
+        width: 100%;
+        object-fit: cover;
+    }
+}

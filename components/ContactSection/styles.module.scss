@@ -1,0 +1,58 @@
+@import "../../theme//typography.scss";
+@import "../../theme//colors.scss";
+
+.content{
+    max-width: 70vw;
+    display: flex;
+    width: 100%;
+    h1{
+        @include title-white;
+        margin-bottom: 20px
+    }
+    p{
+        @include body-white;
+        margin-bottom: 20px
+    }
+
+    form{
+        input, select, label{
+            height: 60px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            @include body;
+            margin: 10px 0;
+            background-color: white;
+        }
+        label{
+            display: inline-block;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+                }
+                button{
+                    border-radius: 5px;
+                    @include body;
+                    color: $pink;
+                    background-color: $green;
+                    width: 100%;
+                    height: 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    cursor: pointer;
+                    border: none;
+                }
+    }
+    .imageInput{
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+    }
+}
+.layout{
+    background-color: $pink-dark;
+    
+}
